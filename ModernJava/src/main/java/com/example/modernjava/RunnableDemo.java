@@ -1,5 +1,9 @@
 package com.example.modernjava;
 
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.Arrays;
+
 public class RunnableDemo {
     /*모던 자바 예제 1. Functional Interface 예제를 만들어보시오.
     Functional Programming 의의: 주어진 변수값을 그대로 리턴값으로 되돌려주면서
@@ -25,5 +29,37 @@ public class RunnableDemo {
         //Runnable r = () -> System.out.println(
         //    "lambda expression implementing the run method");
         //new Thread(r).start();
+
+        File directory = new File("./src/main/java");
+
+        String[] names = directory.list(new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith(".java");
+            }
+        });
+        System.out.println(Arrays.asList(names));
+        /*
+        File directory = new File("./src/main/java");
+
+        String[] names = directory.list((dir, name) -> name.endsWith(".java"));
+        System.out.println(Arrays.asList(names));
+         */
+
+        /*
+        File directory = new File("./src/main/java");
+
+        String[] names = directory.list((File dir, String name) ->
+        name.endsWith(".java"));
+         */
+
+        /*
+        File directory = new File("./src/main/java");
+
+        String[] names = directory.list((File dir, String name) -> {
+            return name.endsWith(".java");
+        });
+        System.out.println(Arrays.asList(names));
+         */
     }
 }
