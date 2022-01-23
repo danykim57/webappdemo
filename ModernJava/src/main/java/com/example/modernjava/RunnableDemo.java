@@ -1,8 +1,8 @@
 package com.example.modernjava;
 
-import java.io.File;
-import java.io.FilenameFilter;
-import java.util.Arrays;
+//import java.io.File;
+//import java.io.FilenameFilter;
+//import java.util.Arrays;
 
 public class RunnableDemo {
     /*모던 자바 예제 1. Functional Interface 예제를 만들어보시오.
@@ -13,7 +13,13 @@ public class RunnableDemo {
     가능한 객체
     */
     public static void main(String[] args) {
+        MySubClass example = new MySubClass();
+        example.meh();
+        example.sayBoy();
+        example.wham(3);
+        example.boom("Huh");
         //무명의 이너 클래스를 이용할 경우
+        /*
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -21,6 +27,7 @@ public class RunnableDemo {
                         "inside runnable using an anonymous inner class");
             }
         }).start();
+        */
 
 
         //람다 함수로 표현할 경우
@@ -29,7 +36,7 @@ public class RunnableDemo {
         //Runnable r = () -> System.out.println(
         //    "lambda expression implementing the run method");
         //new Thread(r).start();
-
+        /*
         File directory = new File("./src/main/java");
 
         String[] names = directory.list(new FilenameFilter() {
@@ -38,7 +45,9 @@ public class RunnableDemo {
                 return name.endsWith(".java");
             }
         });
+
         System.out.println(Arrays.asList(names));
+        */
         /*
         File directory = new File("./src/main/java");
 
