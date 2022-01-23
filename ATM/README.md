@@ -57,7 +57,11 @@ $ sudo apt-get update
 $ sudo apt-get install gradle
 ```
 
-2. Run Gradle to the directory where cloned repository is.
+2. Type this when you are on the directory where cloned repository is.
+```
+gradle build
+gradle run
+```
 
 
 
