@@ -22,7 +22,7 @@ class ATMTest {
     @Test
     void getConsole() {
         Console console = atm.getConsole();
-        assertNull(console);
+        assertNotNull(console);
     }
 
     @Test

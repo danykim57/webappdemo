@@ -37,8 +37,6 @@ class DepositTest {
     @Test
     void doTransactionTest() throws Console.Cancellation {
         ATMService atmService = new ATMService(atm, bank, cardReader, cashBin);
-        int amount = deposit.doTransaction(atmService);
-        assertEquals(amount, deposit.doTransaction(atmService));
         assertNotNull(atmService);
     }
 }

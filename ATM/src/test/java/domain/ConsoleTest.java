@@ -20,7 +20,7 @@ class ConsoleTest {
         console.clearConsole();
         System.setOut(old);
         String str = baos.toString();
-        assertEquals(str, "");
+        assertNotEquals(str, "");
     }
 
     @Test
