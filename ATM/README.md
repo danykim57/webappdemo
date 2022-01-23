@@ -60,9 +60,13 @@ $ sudo apt-get install gradle
 2. Type this when you are on the directory where cloned repository is.
 ```
 gradle build
-gradle run
 ```
 
+There is no main class for this project.
+
+Therefore, I didn't add gradle run configuration.
+
+I hoped you enjoyed :)
 
 
 
